@@ -51,7 +51,7 @@ class _SignUpPageState extends State<SignUpPage> {
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomInset: false,
-        resizeToAvoidBottomPadding: false,
+        //resizeToAvoidBottomPadding: false,
         body: Stack(
           children: <Widget>[
             Image.network(
@@ -135,13 +135,14 @@ class _SignUpPageState extends State<SignUpPage> {
                                   .doc(user.uid)
                                   .set({'userName': userName});
                               Navigator.pushReplacementNamed(
-                                  context, Router.indexPage);
+                                  context, PageRouter.indexPage);
                             }
                           } catch (e) {
-                            PlatformException error = e as PlatformException;
+                            //PlatformException error = e as PlatformException;
                             setState(() {
-                              errorMsg = error.code;
+                              errorMsg = e.code;
                               _loading = false;
+                              print('Firebase error: ' + e.toString());
                             });
                             Future.delayed(Duration(seconds: 3), () {
                               setState(() {

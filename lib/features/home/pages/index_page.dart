@@ -39,7 +39,7 @@ class _IndexPageState extends State<IndexPage> {
                 onPressed: () {
                   Navigator.pushNamed(
                     context,
-                    Router.seeAllBooksPage,
+                    PageRouter.seeAllBooksPage,
                   );
                 },
                 child: Icon(FontAwesomeIcons.plus),

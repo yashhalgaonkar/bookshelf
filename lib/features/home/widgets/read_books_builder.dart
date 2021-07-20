@@ -270,7 +270,7 @@ class _ReadBooksBuilderState extends State<ReadBooksBuilder> {
                                       )),
                                 ],
                                 onPressed: () => Navigator.pushNamed(
-                                    context, Router.bookPage,
+                                    context, PageRouter.bookPage,
                                     arguments: BookPageArguments(
                                         book: book,
                                         fromLibrary: true,

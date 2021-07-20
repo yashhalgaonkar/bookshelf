@@ -17,7 +17,7 @@ import 'package:flutter_app/features/home/pages/settings_page.dart';
 import 'package:flutter_app/features/login/pages/sign_up_page.dart';
 import 'package:flutter_app/features/splash/pages/splash_page.dart';
 
-class Router {
+class PageRouter {
   static const splashPage = '/';
   static const signUpPage = '/sign-up-page';
   static const rootPage = '/root-page';
@@ -30,37 +30,37 @@ class Router {
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     final args = settings.arguments;
     switch (settings.name) {
-      case Router.splashPage:
+      case PageRouter.splashPage:
         return MaterialPageRoute<dynamic>(
           builder: (_) => SplashPage(),
           settings: settings,
         );
-      case Router.signUpPage:
+      case PageRouter.signUpPage:
         return MaterialPageRoute<dynamic>(
           builder: (_) => SignUpPage(),
           settings: settings,
         );
-      case Router.rootPage:
+      case PageRouter.rootPage:
         return MaterialPageRoute<dynamic>(
           builder: (_) => RootPage(),
           settings: settings,
         );
-      case Router.indexPage:
+      case PageRouter.indexPage:
         return MaterialPageRoute<dynamic>(
           builder: (_) => IndexPage(),
           settings: settings,
         );
-      case Router.discoverPage:
+      case PageRouter.discoverPage:
         return MaterialPageRoute<dynamic>(
           builder: (_) => DiscoverPage(),
           settings: settings,
         );
-      case Router.settingsPage:
+      case PageRouter.settingsPage:
         return MaterialPageRoute<dynamic>(
           builder: (_) => SettingsPage(),
           settings: settings,
         );
-      case Router.seeAllBooksPage:
+      case PageRouter.seeAllBooksPage:
         if (hasInvalidArgs<int>(args)) {
           return misTypedArgsRoute<int>(args);
         }
@@ -69,7 +69,7 @@ class Router {
           builder: (_) => SeeAllBooksPage(category: typedArgs),
           settings: settings,
         );
-      case Router.bookPage:
+      case PageRouter.bookPage:
         if (hasInvalidArgs<BookPageArguments>(args, isRequired: true)) {
           return misTypedArgsRoute<BookPageArguments>(args);
         }

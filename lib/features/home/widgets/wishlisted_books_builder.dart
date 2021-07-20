@@ -270,7 +270,7 @@ class _WishListedBooksBuilderState extends State<WishListedBooksBuilder> {
                                       )),
                                 ],
                                 onPressed: () => Navigator.pushNamed(
-                                    context, Router.bookPage,
+                                    context, PageRouter.bookPage,
                                     arguments: BookPageArguments(
                                         book: book,
                                         fromLibrary: true,

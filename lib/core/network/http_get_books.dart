@@ -64,9 +64,10 @@ class NetworkCall {
 
     _dio.interceptors.add(_dioCacheManager.interceptor);
 
-    Response response = await _dio.get(
-        '$baseUrl?q=subject:$category&maxResults=39&key=$apiKey',
-        options: _cacheOptions);
+    Response response = await _dio
+        .get('$baseUrl?q=subject:$category&maxResults=39&key=$apiKey',
+            options: _cacheOptions);
+
     if (response.statusCode == 200) {
       response.data['items'].forEach((data) {
         Book book = Book(

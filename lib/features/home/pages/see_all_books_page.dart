@@ -248,7 +248,7 @@ class _SeeAllBooksPageState extends State<SeeAllBooksPage>
               size: 16,
             )),
       ],
-      onPressed: () => Navigator.pushNamed(context, Router.bookPage,
+      onPressed: () => Navigator.pushNamed(context, PageRouter.bookPage,
           arguments: BookPageArguments(
               book: books[index],
               fromLibrary: false,

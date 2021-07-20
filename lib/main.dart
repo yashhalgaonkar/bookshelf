@@ -13,8 +13,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: Router.rootPage,
-      onGenerateRoute: Router.onGenerateRoute,
+      initialRoute: PageRouter.rootPage,
+      onGenerateRoute: PageRouter.onGenerateRoute,
       debugShowCheckedModeBanner: false,
       title: 'Bookshelf',
       theme: ThemeData.light().copyWith(

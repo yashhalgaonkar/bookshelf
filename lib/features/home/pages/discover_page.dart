@@ -154,7 +154,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
 
   Widget categoryChild({TextStyle style, String title, int category}) {
     return GestureDetector(
-      onTap: () => Navigator.pushNamed(context, Router.seeAllBooksPage,
+      onTap: () => Navigator.pushNamed(context, PageRouter.seeAllBooksPage,
           arguments: category),
       child: Container(
         margin: EdgeInsets.all(10),

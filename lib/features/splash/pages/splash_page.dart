@@ -154,9 +154,9 @@ class _SplashPageState extends State<SplashPage>
                           await _auth.signInWithEmailAndPassword(
                               email: email, password: password);
                         } catch (e) {
-                          PlatformException error = e as PlatformException;
+                          //PlatformException error = e as PlatformException;
                           setState(() {
-                            errorMsg = error.code;
+                            errorMsg = e.code;
                             _loading = false;
                           });
                           Future.delayed(Duration(seconds: 3), () {
@@ -195,7 +195,7 @@ class _SplashPageState extends State<SplashPage>
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5)),
                   onPressed: () => Navigator.pushReplacementNamed(
-                      context, Router.signUpPage),
+                      context, PageRouter.signUpPage),
                 )),
             SizedBox(
               height: 50,

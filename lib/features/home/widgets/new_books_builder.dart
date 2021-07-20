@@ -57,7 +57,7 @@ class NewBooksBuilder extends StatelessWidget {
                     GestureDetector(
                       onTap: () => Navigator.pushNamed(
                         context,
-                        Router.seeAllBooksPage,
+                        PageRouter.seeAllBooksPage,
                       ),
                       child: Text(
                         'see all',
@@ -117,7 +117,7 @@ class NewBooksBuilder extends StatelessWidget {
                             )),
                       ],
                       onPressed: () => Navigator.pushNamed(
-                          context, Router.bookPage,
+                          context, PageRouter.bookPage,
                           arguments: BookPageArguments(
                               book: books[index],
                               fromLibrary: false,
